@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+header {
+  padding: 5px;
+  text-align: center;
+  background: red;
+  color: white;
+  font-size: 30px;
+}
+
+header h1 {
+  color: white;
+  margin: 10px;
+}
+
+header img {
+  width: 100px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section .column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.container::after,
+section .column .card .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+section .column .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+section .column .card .container {
+  padding: 0 16px;
+}
+
+section .column .card .container .number {
+  text-align: center;
+  background-color: grey;
+  color: white;
+  font-size: 30px;
+  padding: 50px;
+}
+
+section .column .card .container h2 {
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  section .column {
+    width: 100%;
+    display: block;
+  }
+}
